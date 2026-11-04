@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mabel · Periodista</title>
+<meta name="description" content="Periodista especializado en investigación y reportaje. Trabajos publicados, contacto y recepción segura de pistas.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F6F7F9;--surface:#FFFFFF;--text:#14213D;--muted:#566075;--rule:#D3D8E0;--mark:#FFD23F;--on-mark:#14213D;--link:#1B3A8A;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0F1522;--surface:#172033;--text:#E8ECF3;--muted:#9AA5B8;--rule:#2A354B;--link:#9DB8FF;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0F1522;--surface:#172033;--text:#E8ECF3;--muted:#9AA5B8;--rule:#2A354B;--link:#9DB8FF;color-scheme:dark}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 70px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:400 1.0625rem/1.65 "Newsreader",Georgia,serif}
+a{color:var(--link)}
+:focus-visible{outline:3px solid var(--mark);outline-offset:2px}
+.wrap{max-width:60rem;margin:0 auto;padding:0 1.25rem}
+header{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);border-bottom:1px solid var(--rule);z-index:5}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem;height:3.5rem}
+.brand{font-weight:600;text-decoration:none;color:var(--text);font-size:1.15rem}
+nav{display:flex;gap:1.25rem;font:500 .95rem "Instrument Sans",system-ui,sans-serif}
+nav a{color:var(--text);text-decoration:none}
+nav a:hover{text-decoration:underline;text-decoration-color:var(--mark);text-decoration-thickness:3px;text-underline-offset:4px}
+.hero{padding:4.5rem 0 3.5rem;border-bottom:1px solid var(--rule)}
+h1{font:600 clamp(2.4rem,7vw,4.6rem)/1.05 "Newsreader",Georgia,serif;letter-spacing:-.02em;margin:0 0 1.5rem;max-width:16ch}
+.lead{font-size:1.25rem;max-width:38rem;color:var(--muted);margin:0 0 2rem}
+.btn{display:inline-block;background:var(--mark);color:var(--on-mark);font:600 1rem "Instrument Sans",system-ui,sans-serif;padding:.8rem 1.4rem;border-radius:4px;text-decoration:none}
+.btn:hover{filter:brightness(.95)}
+.btn.ghost{background:transparent;color:var(--text);border:1px solid var(--rule);margin-left:.5rem}
+section{padding:3.5rem 0;border-bottom:1px solid var(--rule)}
+h2{font:600 1.9rem/1.2 "Newsreader",Georgia,serif;margin:0 0 1.5rem}
+.filters{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:1.5rem}
+.filters button{font:500 .9rem "Instrument Sans",system-ui,sans-serif;background:transparent;color:var(--text);border:1px solid var(--rule);border-radius:999px;padding:.4rem 1rem;cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--mark);color:var(--on-mark);border-color:var(--mark)}
+.piece{display:grid;grid-template-columns:7.5rem 1fr;gap:0 1.5rem;padding:1.25rem 0;border-top:1px solid var(--rule)}
+.piece:last-child{border-bottom:1px solid var(--rule)}
+.meta{font:500 .85rem/1.5 "Instrument Sans",system-ui,sans-serif;color:var(--muted)}
+.piece h3{font:600 1.35rem/1.3 "Newsreader",Georgia,serif;margin:0 0 .3rem}
+.piece h3 a{color:var(--text);text-decoration:none}
+.piece h3 a:hover{text-decoration:underline;text-decoration-color:var(--mark);text-decoration-thickness:3px;text-underline-offset:3px}
+.piece p{margin:0;color:var(--muted)}
+.note{font:400 .9rem "Instrument Sans",system-ui,sans-serif;color:var(--muted);margin-top:1rem}
+.cols{display:grid;grid-template-columns:1.4fr 1fr;gap:3rem}
+.cols ul{margin:0;padding:0;list-style:none;font:400 1rem/1.5 "Instrument Sans",system-ui,sans-serif}
+.cols li{padding:.6rem 0;border-top:1px solid var(--rule)}
+.cols h3{font:600 1rem "Instrument Sans",system-ui,sans-serif;margin:0 0 .5rem}
+.box{background:var(--surface);border:1px solid var(--rule);border-left:6px solid var(--mark);padding:1.5rem;border-radius:4px;font-family:"Instrument Sans",system-ui,sans-serif;font-size:1rem}
+.box p{margin:.4rem 0}
+code{font-size:.95em;word-break:break-all}
+footer{padding:2rem 0;font:400 .9rem "Instrument Sans",system-ui,sans-serif;color:var(--muted)}
+@media (max-width:42rem){.piece{grid-template-columns:1fr}.cols{grid-template-columns:1fr;gap:2rem}nav{gap:.9rem}.btn.ghost{margin:.6rem 0 0}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a class="brand" href="#inicio">Mabel · Periodista</a>
+  <nav aria-label="Principal"><a href="#trabajos">Trabajos</a><a href="#sobre-mi">Sobre mí</a><a href="#contacto">Contacto</a></nav>
+</div></header>
+
+<main id="inicio">
+<div class="hero"><div class="wrap">
+  <h1>Periodismo que contrasta antes de publicar.</h1>
+  <p class="lead">Soy periodista y cuento lo que ocurre en Huetor Tajar: investigación, reportaje y actualidad, con documentos y fuentes a la vista.</p>
+  <a class="btn" href="#contacto">Enviar una noticia</a><a class="btn ghost" href="#trabajos">Ver trabajos</a>
+</div></div>
+
+<section id="trabajos"><div class="wrap">
+  <h2>Trabajos publicados</h2>
+  <div class="filters" role="group" aria-label="Filtrar por tipo">
+    <button aria-pressed="true" data-f="todos">Todos</button>
+    <button aria-pressed="false" data-f="Investigación">Investigación</button>
+    <button aria-pressed="false" data-f="Reportaje">Reportaje</button>
+    <button aria-pressed="false" data-f="Opinión">Opinión</button>
+    <button aria-pressed="false" data-f="Audio">Audio</button>
+  </div>
+  <div id="lista" aria-live="polite"></div>
+  <p class="note"></p>
+</div></section>
+
+<section id="sobre-mi"><div class="wrap cols">
+  <div>
+    <h2>Sobre mí</h2>
+    <p>Me estoy formando en la Universidad de Granada</p>
+    <p>Mi manera de verificar es contrastar los datos en varios diarios, corrijo cuando haya alguna informacion incompleta y protejo mis fuentes no aportando nombres directos</p>
+  </div>
+  <div>
+    <h3>Especialidades</h3>
+    <ul><li>Reportaje local</li></ul>
+    <h3 style="margin-top:1.5rem">Medios</h3>
+    <ul><li>Colaboraciones freelance</li></ul>
+  </div>
+</div></section>
+
+<section id="contacto"><div class="wrap">
+  <h2>Contacto</h2>
+  <div class="box">
+    <p><strong>Encargos y entrevistas:</strong> <a href="mailto:periodistamabel21@gmail.com">periodistamabel21@gmail.com</a></p>
+    <p><strong>Pistas y documentos:</strong> escribe por WhatsApp al <code>+34 658 662 039</code> o a <a href="mailto:periodistamabel21@gmail.com">periodistamabel21@gmail.com</a>. Trato cada contacto con reserva y no revelo mis fuentes.</p>
+    <p><strong>Correcciones:</strong> si encuentras un error en alguno de mis trabajos, <a href="mailto:periodistamabel21@gmail.com">avísame</a> y lo corrijo públicamente.</p>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">© <span id="y"></span> Mabel · Periodista. Todos los derechos reservados.</div></footer>
+
+<script>
+const piezas=[
+{t:"Recordando Huetor Tajar",m:"Mabel TV",d:"04 nov 2026",c:"Reportaje",x:"Entrevistas a las instituciones municipales."},
+{t:"Belen Municipal de Huetor Tajar",m:"Mabel TV",d:"04 nov 2026",c:"Reportaje",x:"Recorrido audiovisual por las instalaciones."},
+{t:"Eventos municipales",m:"Mabel TV",d:"04 nov 2026",c:"Reportaje",x:"Grabacion de la navidad municipal."},
+{t:"Ferias municipales",m:"Mabel TV",d:"04 nov 2026",c:"Reportaje",x:"Recorrido audiovisual por las instalaciones."},
+{t:"Día de todos los santos",m:"Mabel TV",d:"01 nov 2026",c:"Reportaje",x:"Recorrido audiovisual por el cementerio mientras se reza el rosario de animas."}
+];
+let f="todos";
+const L=document.getElementById("lista");
+function pinta(){
+  L.innerHTML="";
+  piezas.filter(p=>f==="todos"||p.c===f).forEach(p=>{
+    const a=document.createElement("article");a.className="piece";
+    a.innerHTML='<div class="meta">'+p.d+'<br>'+p.m+'<br>'+p.c+'</div><div><h3><a href="https://www.youtube.com/@PeriodistaMabel" target="_blank">'+p.t+'</a></h3><p>'+p.x+'</p></div>';
+    L.appendChild(a);
+  });
+}
+document.querySelectorAll(".filters button").forEach(b=>b.addEventListener("click",()=>{
+  f=b.dataset.f;
+  document.querySelectorAll(".filters button").forEach(o=>o.setAttribute("aria-pressed",o===b));
+  pinta();
+}));
+document.getElementById("y").textContent=new Date().getFullYear();
+pinta();
+</script>
+</body>
+</html>
